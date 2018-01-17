@@ -6,10 +6,6 @@ read SITE_NAME
 
 
 NOW=$(date +"%Y-%m-%d-%H_%M")
-FILE="$WPDBNAME-$NOW.sql"
-BACKUP_DIR="/opt/"
-#SITE_DIR='find / -name "$SITE_NAME"'
-PWD=pwd
 
 WPDBNAME=`grep DB_NAME $SITE_NAME/wp-config.php | cut -d \' -f 4`
 WPDBUSER=`grep DB_USER $SITE_NAME/wp-config.php | cut -d \' -f 4`
